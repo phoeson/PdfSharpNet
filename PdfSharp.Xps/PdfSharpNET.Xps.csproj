@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+		<PropertyGroup>
+				<TargetFrameworks>net462;net47;net48;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
+				<UseWPF>true</UseWPF>
+				<OutputType>Library</OutputType>
+				<RootNamespace>PdfSharp.Xps</RootNamespace>
+				<AssemblyName>PdfSharp.Xps</AssemblyName>
+				<SignAssembly>true</SignAssembly>
+				<AssemblyOriginatorKeyFile>StrongnameKey.snk</AssemblyOriginatorKeyFile>
+				<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+				<UseWindowsForms>true</UseWindowsForms>
+				<UseWPF>true</UseWPF>
+				<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		</PropertyGroup>
+		<ItemGroup>
+				<ProjectReference Include="..\PdfSharp\PdfSharpNet.csproj" />
+		</ItemGroup>
+		<ItemGroup Condition=" '$(TargetFramework)' == 'net462' or  '$(TargetFramework)' == 'net47'  or  '$(TargetFramework)' == 'net48' ">
+				<Reference Include="ReachFramework" />
+		</ItemGroup>
+</Project>
